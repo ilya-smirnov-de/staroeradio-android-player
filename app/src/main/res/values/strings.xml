@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Vintage radio</string>
+    <string name="heading">VINTAGE RADIO</string>
+    <string name="subheading">Archive recordings on air</string>
+    <string name="stations_heading">Choose a station</string>
+    <string name="station_old">Vintage radio</string>
+    <string name="station_children">Radio for kids</string>
+    <string name="bitrate_label">%1$d kbit/s · internet radio</string>
+    <string name="button_play">Play</string>
+    <string name="button_pause">Pause</string>
+    <string name="button_retry">Retry connection</string>
+    <string name="status_connecting">Connecting to the broadcast…</string>
+    <string name="status_buffering">Buffering…</string>
+    <string name="status_playing">On air</string>
+    <string name="status_paused">Playback paused</string>
+    <string name="status_connection_failed">Unable to connect. Check your internet connection and try again.</string>
+    <string name="menu">Menu</string>
+    <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="language_english">English</string>
+    <string name="language_russian">Русский</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="media_artist">Vintage radio · %1$d kbit/s</string>
+    <string name="about">About</string>
+    <string name="about_message">This app is an Android player for the project:\n\n<annotation key="role" value="project_name">Staroe Radio</annotation>\n\nCreated by Yuri Metelkin\nContact: staroeradio@mail.ru\n\nWebsite: https://staroeradio.ru/</string>
+    <string name="button_close">Close</string>
+    <string name="stream_quality">Stream quality</string>
+    <string name="quality_option">%1$d kbit/s</string>
+    <string name="quality_info">Info</string>
+    <string name="quality_description">The selected quality applies to all stations. Changing quality reconnects the current stream.</string>
+    <string name="station_music">Music</string>
+</resources>

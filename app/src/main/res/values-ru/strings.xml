@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="heading">СТАРОЕ РАДИО</string>
+    <string name="subheading">Архивные записи в прямом эфире</string>
+    <string name="stations_heading">Выберите канал</string>
+    <string name="station_old">Старое радио</string>
+    <string name="station_children">Детское радио</string>
+    <string name="bitrate_label">%1$d кбит/с · интернет-трансляция</string>
+    <string name="button_play">Слушать</string>
+    <string name="button_pause">Пауза</string>
+    <string name="button_retry">Повторить подключение</string>
+    <string name="status_connecting">Подключение к эфиру…</string>
+    <string name="status_buffering">Буферизация потока…</string>
+    <string name="status_playing">В эфире</string>
+    <string name="status_paused">Воспроизведение приостановлено</string>
+    <string name="status_connection_failed">Не удалось подключиться. Проверьте интернет и повторите.</string>
+    <string name="menu">Меню</string>
+    <string name="settings">Настройки</string>
+    <string name="language">Язык</string>
+    <string name="language_english">English</string>
+    <string name="language_russian">Русский</string>
+    <string name="button_cancel">Отмена</string>
+    <string name="media_artist">Старое радио · %1$d кбит/с</string>
+    <string name="about">О приложении</string>
+    <string name="about_message">Приложение — Android-плеер проекта:\n\n<annotation key="role" value="project_name">Старое радио</annotation>\n\nАвтор проекта — Юрий Метелкин\nКонтакт: staroeradio@mail.ru\n\nСайт: https://staroeradio.ru/</string>
+    <string name="button_close">Закрыть</string>
+    <string name="stream_quality">Качество потока</string>
+    <string name="quality_option">%1$d кбит/с</string>
+    <string name="quality_info">Подробнее</string>
+    <string name="quality_description">Выбранное качество применяется ко всем каналам. При изменении качества текущий поток переподключается.</string>
+    <string name="station_music">Музыка</string>
+</resources>

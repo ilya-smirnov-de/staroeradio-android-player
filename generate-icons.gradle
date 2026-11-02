@@ -1,0 +1,40 @@
+import java.awt.Color
+import java.awt.RenderingHints
+import java.awt.image.BufferedImage
+import javax.imageio.ImageIO
+
+// Run with ./gradlew -I generate-icons.gradle generateLauncherIcons
+gradle.projectsEvaluated {
+    rootProject.tasks.register("generateLauncherIcons") {
+        doLast {
+            def source = new File(rootProject.projectDir, "app/app-icon-round.png")
+            def original = ImageIO.read(source)
+            def res = new File(rootProject.projectDir, "app/src/main/res")
+            def render = { Integer size, Double scale, File output ->
+                def bitmap = new BufferedImage(size, size, BufferedImage.TYPE_INT_ARGB)
+                def graphics = bitmap.createGraphics()
+                graphics.color = new Color(0x202427)
+                graphics.fillRect(0, 0, size, size)
+                graphics.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC)
+                graphics.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY)
+                int edge = Math.round(size * scale)
+                int offset = (size - edge).intdiv(2)
+                graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON)
+                graphics.clip(new java.awt.geom.Ellipse2D.Double(offset, offset, edge, edge))
+                // Crop the thin white rim in the source artwork.
+                int crop = Math.round(original.width * 0.018f)
+                graphics.drawImage(original, offset, offset, offset + edge, offset + edge,
+                    crop, crop, original.width - crop, original.height - crop, null)
+                graphics.dispose()
+                output.parentFile.mkdirs()
+                ImageIO.write(bitmap, "png", output)
+            }
+            // Adaptive masks expose the central 72dp of the 108dp layer.
+            render(432, 0.70d, new File(res, "drawable-nodpi/app_icon.png"))
+            [mdpi:48, hdpi:72, xhdpi:96, xxhdpi:144, xxxhdpi:192].each { density, size ->
+                render(size, 1.0d, new File(res, "mipmap-${density}/ic_launcher.png"))
+                render(size, 1.0d, new File(res, "mipmap-${density}/ic_launcher_round.png"))
+            }
+        }
+    }
+}
