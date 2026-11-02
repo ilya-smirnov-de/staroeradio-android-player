@@ -1,0 +1,36 @@
+# Gradle and Kotlin caches
+.gradle/
+.kotlin/
+
+# Generated build output (all modules)
+build/
+.externalNativeBuild/
+.cxx/
+
+# Android Studio / IntelliJ local state
+.idea/
+*.iml
+/captures/
+.navigation/
+
+# Local SDK configuration
+local.properties
+
+# Signing keys and credentials
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+.env
+.env.*
+!.env.example
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor temporary files
+*.swp
+*.swo
+*~
